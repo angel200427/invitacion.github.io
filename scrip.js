@@ -1,11 +1,11 @@
-// ========== ACTIVAR LA MÚSICA AL TOCAR LA PANTALLA ==========
+// ACTIVAR MÚSICA AL TOCAR LA PANTALLA
 document.addEventListener("click", () => {
   const audio = document.getElementById("musica");
   audio.play().catch(() => {});
 }, { once: true });
 
 
-// ========== GENERAR FLORES ANIMADAS ==========
+// FLORES ANIMADAS
 const cont = document.getElementById("flores");
 
 for (let i = 0; i < 25; i++) {
@@ -26,15 +26,15 @@ for (let i = 0; i < 25; i++) {
 }
 
 
-// ========== CONFIRMAR ASISTENCIA ==========
+// CONFIRMAR ASISTENCIA → ENVÍA A WHATSAPP
 function confirmarAsistencia() {
 
-  let numero = "593969035183"; // TU NÚMERO
+  let numero = "593969035183"; // tu número
+
   let mensaje = "Confirmo mi invitación 🙏✨";
 
   window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, "_blank");
 
-  // Mensaje explosivo animado
   let msg = document.getElementById("mensaje-gracias");
   msg.classList.add("mostrar");
 
